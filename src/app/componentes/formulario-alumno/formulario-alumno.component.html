@@ -1,0 +1,64 @@
+<section>
+
+  <fieldset>
+    <label for="">Nombre del alumno</label>
+    <input
+      type="text"
+      name="nombre"
+      [value]="nuevoHistorialAlumno.nombre"
+      (input)="cambiarNombre($event)"
+      >
+
+  </fieldset>
+<br>
+
+  <fieldset>
+    <label for="">Apellido del alumno</label>
+    <input
+      type="text"
+      name="apellido"
+      [value]="nuevoHistorialAlumno.apellido"
+      (input)="cambiarApellido($event)"
+
+    >
+
+  </fieldset>
+
+<br>
+  <fieldset>
+    <label for="">Rut alumno</label>
+    <input
+      type="text"
+      name="rut"
+      [value]="nuevoHistorialAlumno.rut"
+      (input)="cambiarRut($event)"
+
+   >
+
+  </fieldset>
+
+<br>
+
+  <fieldset>
+    <label for="">Edad alumno</label>
+    <input
+      type="number"
+      name="edad"
+      [value]="nuevoHistorialAlumno.edad"
+      (input)="cambiarEdad($event)"
+    >
+    <p>{{ nuevoHistorialAlumno.edad }} </p>
+  </fieldset>
+
+<br>
+
+  <fieldset>
+    <button
+      type="button"
+      role="button"
+      (click)="guardarHistorial()"
+    >
+      Guardar
+    </button>
+  </fieldset>
+</section>

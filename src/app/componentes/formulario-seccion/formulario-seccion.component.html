@@ -1,0 +1,24 @@
+<section>
+
+  <fieldset>
+    <label for="">Nombre de la seccion</label>
+    <input
+      type="text"
+      name="seccion"
+      [value]="nuevoHistorialSeccion.nombreSeccion"
+      (input)="cambiarSeccion($event)"
+      >
+
+  </fieldset>
+<br>
+
+  <fieldset>
+    <button
+      type="button"
+      role="button"
+      (click)="guardarHistorial()"
+    >
+      Guardar
+    </button>
+  </fieldset>
+</section>

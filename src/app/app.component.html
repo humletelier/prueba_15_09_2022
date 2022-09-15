@@ -1,0 +1,53 @@
+
+<h2>Ingrese clase</h2>
+<app-formulario-seccion
+(salida)="escuchandoAlHijoSeccion()"
+(salidaString)="escuchandoDetalleSeccion($event)"
+(enviarDato)="agregarNuevoSeccion($event)"
+></app-formulario-seccion>
+
+
+
+<br>
+
+
+<app-lista-seccion
+  [secciones]="elementosGuardadosSeccion"
+
+>
+</app-lista-seccion>
+
+<br>
+
+<h2>Ingrese alumno</h2>
+<app-formulario-alumno
+(salida)="escuchandoAlHijo()"
+(salidaString)="escuchandoDetalle($event)"
+(enviarDato)="agregarNuevo($event)"
+></app-formulario-alumno>
+
+
+
+<app-lista-alumnos
+  [alumnos]="elementosGuardados"
+>
+</app-lista-alumnos>
+
+<h1>HISTORIAL</h1>
+
+<app-lista-seccion
+  [secciones]="elementosGuardadosSeccion"
+
+>
+</app-lista-seccion>
+<br>
+<app-lista-alumnos
+  [alumnos]="elementosGuardados"
+>
+</app-lista-alumnos>
+
+<app-lista-historial
+
+>
+</app-lista-historial>
+<p>FECHA: {{dateObj | date:'medium'}}</p>
